@@ -17,6 +17,6 @@ Password Generator is a mobile application which follows the MVVM architecture. 
 Coming Soon!
 
 ## Find Me Also On
-<a href="https://www.instagram.com/nickmadethisone/" target="_blank">Instagram</a><br>
-<a href="https://www.linkedin.com/in/nick-theodoridis-75097a266/" target="_blank">LinkedIn</a><br>
+<a href="https://www.instagram.com/nickmadethisone/" target="_blank">Instagram</a> <br>
+<a href="https://www.linkedin.com/in/nick-theodoridis-75097a266/" target="_blank">LinkedIn</a> <br>
 <a href="https://twitter.com/nickiOSDev" target="_blank">Twitter</a>
