@@ -2,7 +2,7 @@
 
 
 ## About Application
-Password Generator is a mobile application which follows the MVVM architecture. This application built in Xcode using Swift programming language and SwiftUI framework. In this app you are given the option through some fields to create a password and it creates it for you showing how strong it is. I will upload a video presentation the next few days.
+Password Generator is a mobile application which follows the MVVM architecture. This application built in Xcode using Swift programming language and SwiftUI framework. In this app you have the option through some fields to create a password and this creates and show you how strong it is.
 
 ## Screenshots
 
