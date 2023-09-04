@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69A2503D2AA11C57007BFA97 /* TabControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2503C2AA11C57007BFA97 /* TabControllerView.swift */; };
+		69A2503F2AA11C7E007BFA97 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2503E2AA11C7E007BFA97 /* SettingsView.swift */; };
+		69A250412AA11C90007BFA97 /* AdapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A250402AA11C90007BFA97 /* AdapterView.swift */; };
+		69A250432AA1204C007BFA97 /* PasswordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A250422AA1204C007BFA97 /* PasswordsView.swift */; };
 		69F848282A18F2F600CFBE82 /* PasswordGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848272A18F2F600CFBE82 /* PasswordGeneratorApp.swift */; };
-		69F8482A2A18F2F600CFBE82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848292A18F2F600CFBE82 /* ContentView.swift */; };
+		69F8482A2A18F2F600CFBE82 /* GeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848292A18F2F600CFBE82 /* GeneratorView.swift */; };
 		69F8482C2A18F2F700CFBE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F8482B2A18F2F700CFBE82 /* Assets.xcassets */; };
 		69F8482F2A18F2F700CFBE82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F8482E2A18F2F700CFBE82 /* Preview Assets.xcassets */; };
 		69F848392A18F2F700CFBE82 /* PasswordGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848382A18F2F700CFBE82 /* PasswordGeneratorTests.swift */; };
 		69F848432A18F2F700CFBE82 /* PasswordGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848422A18F2F700CFBE82 /* PasswordGeneratorUITests.swift */; };
 		69F848452A18F2F700CFBE82 /* PasswordGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848442A18F2F700CFBE82 /* PasswordGeneratorUITestsLaunchTests.swift */; };
 		69F848532A18F35800CFBE82 /* PasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848522A18F35800CFBE82 /* PasswordModel.swift */; };
-		69F848562A18F4F400CFBE82 /* Content-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848552A18F4F400CFBE82 /* Content-ViewModel.swift */; };
+		69F848562A18F4F400CFBE82 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848552A18F4F400CFBE82 /* PasswordViewModel.swift */; };
 		69F848592A18F6B300CFBE82 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848582A18F6B300CFBE82 /* ViewModifiers.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,9 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69A2503C2AA11C57007BFA97 /* TabControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabControllerView.swift; sourceTree = "<group>"; };
+		69A2503E2AA11C7E007BFA97 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		69A250402AA11C90007BFA97 /* AdapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterView.swift; sourceTree = "<group>"; };
+		69A250422AA1204C007BFA97 /* PasswordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsView.swift; sourceTree = "<group>"; };
 		69F848242A18F2F600CFBE82 /* PasswordGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F848272A18F2F600CFBE82 /* PasswordGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorApp.swift; sourceTree = "<group>"; };
-		69F848292A18F2F600CFBE82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		69F848292A18F2F600CFBE82 /* GeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorView.swift; sourceTree = "<group>"; };
 		69F8482B2A18F2F700CFBE82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69F8482E2A18F2F700CFBE82 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		69F848342A18F2F700CFBE82 /* PasswordGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +56,7 @@
 		69F848422A18F2F700CFBE82 /* PasswordGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorUITests.swift; sourceTree = "<group>"; };
 		69F848442A18F2F700CFBE82 /* PasswordGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		69F848522A18F35800CFBE82 /* PasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordModel.swift; sourceTree = "<group>"; };
-		69F848552A18F4F400CFBE82 /* Content-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content-ViewModel.swift"; sourceTree = "<group>"; };
+		69F848552A18F4F400CFBE82 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		69F848582A18F6B300CFBE82 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,7 +154,7 @@
 		69F848542A18F4B300CFBE82 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				69F848552A18F4F400CFBE82 /* Content-ViewModel.swift */,
+				69F848552A18F4F400CFBE82 /* PasswordViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -154,8 +162,12 @@
 		69F848572A18F67500CFBE82 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69F848292A18F2F600CFBE82 /* ContentView.swift */,
+				69F848292A18F2F600CFBE82 /* GeneratorView.swift */,
 				69F848582A18F6B300CFBE82 /* ViewModifiers.swift */,
+				69A2503C2AA11C57007BFA97 /* TabControllerView.swift */,
+				69A2503E2AA11C7E007BFA97 /* SettingsView.swift */,
+				69A250402AA11C90007BFA97 /* AdapterView.swift */,
+				69A250422AA1204C007BFA97 /* PasswordsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,11 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A2503F2AA11C7E007BFA97 /* SettingsView.swift in Sources */,
+				69A250412AA11C90007BFA97 /* AdapterView.swift in Sources */,
 				69F848592A18F6B300CFBE82 /* ViewModifiers.swift in Sources */,
 				69F848532A18F35800CFBE82 /* PasswordModel.swift in Sources */,
-				69F8482A2A18F2F600CFBE82 /* ContentView.swift in Sources */,
-				69F848562A18F4F400CFBE82 /* Content-ViewModel.swift in Sources */,
+				69A2503D2AA11C57007BFA97 /* TabControllerView.swift in Sources */,
+				69F8482A2A18F2F600CFBE82 /* GeneratorView.swift in Sources */,
+				69F848562A18F4F400CFBE82 /* PasswordViewModel.swift in Sources */,
 				69F848282A18F2F600CFBE82 /* PasswordGeneratorApp.swift in Sources */,
+				69A250432AA1204C007BFA97 /* PasswordsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

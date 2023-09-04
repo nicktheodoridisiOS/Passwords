@@ -11,7 +11,7 @@ import SwiftUI
 struct PasswordGeneratorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabControllerView()
         }
     }
 }
