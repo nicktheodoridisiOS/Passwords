@@ -37,7 +37,7 @@ class PasswordViewModel: ObservableObject{
         }
         
         let password =   Password(password: newPassword, containsSymbol: containsSymbol, containsUppercase: containsUppercase)
-        
+
         withAnimation{
             passwords.insert(password, at: 0)
         }
