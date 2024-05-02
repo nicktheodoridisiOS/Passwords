@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Password: Identifiable , Codable{
+struct PaswordModel: Identifiable , Codable{
     var id =  UUID()
     var password : String
     var containsSymbol: Bool

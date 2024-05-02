@@ -10,7 +10,7 @@ import SwiftUI
 
 
 class PasswordViewModel: ObservableObject{
-    @Published var passwords: [Password] = []
+    @Published var passwords: [PaswordModel] = []
     @Published var containsSymbol = false
     @Published var containsUppercase = false
     @Published var length = 10
@@ -36,7 +36,7 @@ class PasswordViewModel: ObservableObject{
             newPassword += String(randomCharacter)
         }
         
-        let password =   Password(password: newPassword, containsSymbol: containsSymbol, containsUppercase: containsUppercase)
+        let password =   PaswordModel(password: newPassword, containsSymbol: containsSymbol, containsUppercase: containsUppercase)
 
         withAnimation{
             passwords.insert(password, at: 0)

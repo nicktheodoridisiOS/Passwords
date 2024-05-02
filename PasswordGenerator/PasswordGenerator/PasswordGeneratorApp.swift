@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct PasswordGeneratorApp: App {
@@ -13,5 +14,6 @@ struct PasswordGeneratorApp: App {
         WindowGroup {
             TabControllerView()
         }
+        .modelContainer(for: [Password.self])
     }
 }

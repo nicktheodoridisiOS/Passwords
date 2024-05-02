@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		69A2503D2AA11C57007BFA97 /* TabControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2503C2AA11C57007BFA97 /* TabControllerView.swift */; };
-		69A2503F2AA11C7E007BFA97 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2503E2AA11C7E007BFA97 /* SettingsView.swift */; };
 		69A250412AA11C90007BFA97 /* AdapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A250402AA11C90007BFA97 /* AdapterView.swift */; };
 		69A250432AA1204C007BFA97 /* PasswordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A250422AA1204C007BFA97 /* PasswordsView.swift */; };
+		69C0326C2BE3ED1800052F8D /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C0326B2BE3ED1800052F8D /* Password.swift */; };
 		69F848282A18F2F600CFBE82 /* PasswordGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848272A18F2F600CFBE82 /* PasswordGeneratorApp.swift */; };
 		69F8482A2A18F2F600CFBE82 /* GeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848292A18F2F600CFBE82 /* GeneratorView.swift */; };
 		69F8482C2A18F2F700CFBE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F8482B2A18F2F700CFBE82 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 		69F848392A18F2F700CFBE82 /* PasswordGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848382A18F2F700CFBE82 /* PasswordGeneratorTests.swift */; };
 		69F848432A18F2F700CFBE82 /* PasswordGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848422A18F2F700CFBE82 /* PasswordGeneratorUITests.swift */; };
 		69F848452A18F2F700CFBE82 /* PasswordGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848442A18F2F700CFBE82 /* PasswordGeneratorUITestsLaunchTests.swift */; };
-		69F848532A18F35800CFBE82 /* PasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848522A18F35800CFBE82 /* PasswordModel.swift */; };
+		69F848532A18F35800CFBE82 /* PaswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848522A18F35800CFBE82 /* PaswordModel.swift */; };
 		69F848562A18F4F400CFBE82 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848552A18F4F400CFBE82 /* PasswordViewModel.swift */; };
 		69F848592A18F6B300CFBE82 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848582A18F6B300CFBE82 /* ViewModifiers.swift */; };
 /* End PBXBuildFile section */
@@ -42,9 +42,9 @@
 
 /* Begin PBXFileReference section */
 		69A2503C2AA11C57007BFA97 /* TabControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabControllerView.swift; sourceTree = "<group>"; };
-		69A2503E2AA11C7E007BFA97 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		69A250402AA11C90007BFA97 /* AdapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterView.swift; sourceTree = "<group>"; };
 		69A250422AA1204C007BFA97 /* PasswordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsView.swift; sourceTree = "<group>"; };
+		69C0326B2BE3ED1800052F8D /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
 		69F848242A18F2F600CFBE82 /* PasswordGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F848272A18F2F600CFBE82 /* PasswordGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorApp.swift; sourceTree = "<group>"; };
 		69F848292A18F2F600CFBE82 /* GeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorView.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		69F8483E2A18F2F700CFBE82 /* PasswordGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F848422A18F2F700CFBE82 /* PasswordGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorUITests.swift; sourceTree = "<group>"; };
 		69F848442A18F2F700CFBE82 /* PasswordGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		69F848522A18F35800CFBE82 /* PasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordModel.swift; sourceTree = "<group>"; };
+		69F848522A18F35800CFBE82 /* PaswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaswordModel.swift; sourceTree = "<group>"; };
 		69F848552A18F4F400CFBE82 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		69F848582A18F6B300CFBE82 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +114,7 @@
 				69F848272A18F2F600CFBE82 /* PasswordGeneratorApp.swift */,
 				69F8482B2A18F2F700CFBE82 /* Assets.xcassets */,
 				69F8482D2A18F2F700CFBE82 /* Preview Content */,
+				69C0326B2BE3ED1800052F8D /* Password.swift */,
 			);
 			path = PasswordGenerator;
 			sourceTree = "<group>";
@@ -146,7 +147,7 @@
 		69F848512A18F34400CFBE82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				69F848522A18F35800CFBE82 /* PasswordModel.swift */,
+				69F848522A18F35800CFBE82 /* PaswordModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,7 +166,6 @@
 				69F848292A18F2F600CFBE82 /* GeneratorView.swift */,
 				69F848582A18F6B300CFBE82 /* ViewModifiers.swift */,
 				69A2503C2AA11C57007BFA97 /* TabControllerView.swift */,
-				69A2503E2AA11C7E007BFA97 /* SettingsView.swift */,
 				69A250402AA11C90007BFA97 /* AdapterView.swift */,
 				69A250422AA1204C007BFA97 /* PasswordsView.swift */,
 			);
@@ -302,10 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69A2503F2AA11C7E007BFA97 /* SettingsView.swift in Sources */,
+				69C0326C2BE3ED1800052F8D /* Password.swift in Sources */,
 				69A250412AA11C90007BFA97 /* AdapterView.swift in Sources */,
 				69F848592A18F6B300CFBE82 /* ViewModifiers.swift in Sources */,
-				69F848532A18F35800CFBE82 /* PasswordModel.swift in Sources */,
+				69F848532A18F35800CFBE82 /* PaswordModel.swift in Sources */,
 				69A2503D2AA11C57007BFA97 /* TabControllerView.swift in Sources */,
 				69F8482A2A18F2F600CFBE82 /* GeneratorView.swift in Sources */,
 				69F848562A18F4F400CFBE82 /* PasswordViewModel.swift in Sources */,

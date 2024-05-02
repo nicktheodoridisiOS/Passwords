@@ -15,27 +15,21 @@ struct TabControllerView: View {
         TabView{
             GeneratorView()
                 .tabItem(){
-                    Image(systemName: "shield.fill")
+                    Image(systemName: "lock.circle.fill")
                     Text("Generator")
                 }
             AdapterView()
                 .tabItem(){
-                    Image(systemName: "ellipsis.rectangle.fill")
-                    Text("Custom")
+                    Image(systemName: "plus.circle.fill")
+                    Text("Creator")
                 }
             PasswordsView()
                 .tabItem(){
-                    Image(systemName: "lock.fill")
+                    Image(systemName: "ellipsis.circle.fill")
                     Text("Passwords")
                 }
-            SettingsView()
-                .tabItem(){
-                    Image(systemName: "gear")
-                    Text("Settings")
-                }
         }
-        .tint(.orange)
-        .environment(\.colorScheme, isDarkModeEnabled ? .dark : .light)
+        .tint(.blue)
 
     }
 }
