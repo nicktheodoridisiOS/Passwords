@@ -6,17 +6,19 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct AdapterView: View {
     
     @State private var customPasswordTf: String = ""
     @State private var passwordStrength: String = ""
-
     
     @StateObject private var vm = PasswordViewModel()
     
     @Environment(\.modelContext) var context
-    var passwordList: [Password] = []
+    
+    @Query var categories: [Categories]
+    @State private var selectedCategoryIndex = 0
     
     
     var body: some View {
@@ -27,42 +29,41 @@ struct AdapterView: View {
                         TextField("Enter your password", text: $customPasswordTf)
                         if vm.checkStrength(customPasswordTf) == "Weak" {
                             HStack{
-                                Text("Strength").foregroundStyle(.gray)
+                                Text("Strength")
                                 Spacer()
                                 Text("Weak").foregroundColor(Color.red)
                             }
                         }
                         else if vm.checkStrength(customPasswordTf) == "Medium"{
                             HStack{
-                                Text("Strength").foregroundStyle(.gray)
+                                Text("Strength")
                                 Spacer()
                                 Text("Medium").foregroundColor(Color.orange)
                             }
                         }
                         else{
                             HStack{
-                                Text("Strength").foregroundStyle(.gray)
+                                Text("Strength")
                                 Spacer()
                                 Text("Strong").foregroundColor(Color.green)
                             }
                         }
+                        
                     }
                     
-//                    Section(header: Text("Contains")){
-//                        VStack(alignment:.leading){
-//                            Text("At least 6 characters")
-//                                .foregroundColor(vm.checkCharacterCount(customPasswordTf) ? .blue : .gray.opacity(0.2))
-//                            Text("At least 1 uppercase letter")
-//                                .foregroundColor(vm.checkIfContainsUpper(customPasswordTf) ? .blue : .gray.opacity(0.2))
-//                            Text("At least 1 number")
-//                                .foregroundColor(vm.checkIfContainsNumbers(customPasswordTf) ? .blue : .gray.opacity(0.2))
-//                            Text("At least 1 symbol")
-//                                .foregroundColor(vm.checkIfContainsSymbol(customPasswordTf) ? .blue : .gray.opacity(0.2))
-//                        }
-//                    }
-              
+                    if !categories.isEmpty{
+                        Section(header: Text("Category")) {
+                            Picker("Select Category", selection: $selectedCategoryIndex) {
+                                ForEach(0..<categories.count, id: \.self) { index in
+                                    Text(categories[index].name).tag(index)
+                                }
+                            }
+                            .pickerStyle(MenuPickerStyle())
+                        }
+                    }
+                    
                     Button(action: {
-                        addToSavedPasswords(password: customPasswordTf, colorStrength: .red)
+                        addToSavedPasswords(password: customPasswordTf, colorStrength: passwordStrength)
                         customPasswordTf = ""
                     }, label: {
                         Text("Save Password").foregroundStyle(customPasswordTf.isEmpty ? .gray.opacity(0.2) : .blue).centerH()
@@ -75,24 +76,35 @@ struct AdapterView: View {
         }
     }
     
-    func addToSavedPasswords(password: String, colorStrength: Color) {
-        let colorString = colorToString(color: colorStrength)
-        let password = Password(name: password, color: colorString)
-        context.insert(password)
-    }
-    
-    func colorToString(color: Color) -> String {
-        switch color {
-        case .red: return "#FF0000"
-        case .orange: return "#00FF00"
-        case .green: return "#00FF00"
-        default: return "#FFFFFF" //gray
+    func addToSavedPasswords(password: String, colorStrength: String) {
+        let newPassword = Password(name: password, color: passwordStrength)
+        
+        context.insert(newPassword)
+        
+        if categories.isEmpty {
+            let category = Categories(name: "All Passwords", icon: "tray.2", password: [newPassword])
+            context.insert(category)
+        } else {
+            let selectedCategory = categories[selectedCategoryIndex]
+            selectedCategory.password.append(newPassword)
+            context.insert(selectedCategory)
         }
     }
+
 }
 
-struct AdapterView_Previews: PreviewProvider {
-    static var previews: some View {
-        AdapterView()
-    }
-}
+
+
+
+//                    Section(header: Text("Contains")){
+//                        VStack(alignment:.leading){
+//                            Text("At least 6 characters")
+//                                .foregroundColor(vm.checkCharacterCount(customPasswordTf) ? .blue : .gray.opacity(0.2))
+//                            Text("At least 1 uppercase letter")
+//                                .foregroundColor(vm.checkIfContainsUpper(customPasswordTf) ? .blue : .gray.opacity(0.2))
+//                            Text("At least 1 number")
+//                                .foregroundColor(vm.checkIfContainsNumbers(customPasswordTf) ? .blue : .gray.opacity(0.2))
+//                            Text("At least 1 symbol")
+//                                .foregroundColor(vm.checkIfContainsSymbol(customPasswordTf) ? .blue : .gray.opacity(0.2))
+//                        }
+//                    }

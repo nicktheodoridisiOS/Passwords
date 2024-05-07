@@ -11,10 +11,10 @@ import SwiftUI
 
 @Model
 class Password{
-    @Attribute(.unique) var name: String
-    var color: String?
+    var name: String
+    var color: String
     
-    init(name: String, color: String? = nil) {
+    init(name: String, color: String) {
         self.name = name
         self.color = color
     }

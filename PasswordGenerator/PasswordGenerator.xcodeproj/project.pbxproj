@@ -11,6 +11,9 @@
 		69A250412AA11C90007BFA97 /* AdapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A250402AA11C90007BFA97 /* AdapterView.swift */; };
 		69A250432AA1204C007BFA97 /* PasswordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A250422AA1204C007BFA97 /* PasswordsView.swift */; };
 		69C0326C2BE3ED1800052F8D /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C0326B2BE3ED1800052F8D /* Password.swift */; };
+		69F7F5F62BEA11930011E3D5 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F7F5F52BEA11930011E3D5 /* Categories.swift */; };
+		69F7F5F82BEA16DE0011E3D5 /* PasswordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F7F5F72BEA16DE0011E3D5 /* PasswordList.swift */; };
+		69F7F5FB2BEA1D620011E3D5 /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F7F5FA2BEA1D620011E3D5 /* AddCategoryView.swift */; };
 		69F848282A18F2F600CFBE82 /* PasswordGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848272A18F2F600CFBE82 /* PasswordGeneratorApp.swift */; };
 		69F8482A2A18F2F600CFBE82 /* GeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F848292A18F2F600CFBE82 /* GeneratorView.swift */; };
 		69F8482C2A18F2F700CFBE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F8482B2A18F2F700CFBE82 /* Assets.xcassets */; };
@@ -45,6 +48,9 @@
 		69A250402AA11C90007BFA97 /* AdapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterView.swift; sourceTree = "<group>"; };
 		69A250422AA1204C007BFA97 /* PasswordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsView.swift; sourceTree = "<group>"; };
 		69C0326B2BE3ED1800052F8D /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
+		69F7F5F52BEA11930011E3D5 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		69F7F5F72BEA16DE0011E3D5 /* PasswordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordList.swift; sourceTree = "<group>"; };
+		69F7F5FA2BEA1D620011E3D5 /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
 		69F848242A18F2F600CFBE82 /* PasswordGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F848272A18F2F600CFBE82 /* PasswordGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorApp.swift; sourceTree = "<group>"; };
 		69F848292A18F2F600CFBE82 /* GeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorView.swift; sourceTree = "<group>"; };
@@ -85,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69F7F5F42BEA116B0011E3D5 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				69C0326B2BE3ED1800052F8D /* Password.swift */,
+				69F7F5F52BEA11930011E3D5 /* Categories.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		69F7F5F92BEA1D510011E3D5 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				69F7F5FA2BEA1D620011E3D5 /* AddCategoryView.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 		69F8481B2A18F2F600CFBE82 = {
 			isa = PBXGroup;
 			children = (
@@ -108,13 +131,13 @@
 		69F848262A18F2F600CFBE82 /* PasswordGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				69F7F5F42BEA116B0011E3D5 /* New Group */,
 				69F848512A18F34400CFBE82 /* Model */,
 				69F848572A18F67500CFBE82 /* View */,
 				69F848542A18F4B300CFBE82 /* ViewModel */,
 				69F848272A18F2F600CFBE82 /* PasswordGeneratorApp.swift */,
 				69F8482B2A18F2F700CFBE82 /* Assets.xcassets */,
 				69F8482D2A18F2F700CFBE82 /* Preview Content */,
-				69C0326B2BE3ED1800052F8D /* Password.swift */,
 			);
 			path = PasswordGenerator;
 			sourceTree = "<group>";
@@ -163,11 +186,13 @@
 		69F848572A18F67500CFBE82 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				69F7F5F92BEA1D510011E3D5 /* Actions */,
 				69F848292A18F2F600CFBE82 /* GeneratorView.swift */,
 				69F848582A18F6B300CFBE82 /* ViewModifiers.swift */,
 				69A2503C2AA11C57007BFA97 /* TabControllerView.swift */,
 				69A250402AA11C90007BFA97 /* AdapterView.swift */,
 				69A250422AA1204C007BFA97 /* PasswordsView.swift */,
+				69F7F5F72BEA16DE0011E3D5 /* PasswordList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,11 +329,14 @@
 			files = (
 				69C0326C2BE3ED1800052F8D /* Password.swift in Sources */,
 				69A250412AA11C90007BFA97 /* AdapterView.swift in Sources */,
+				69F7F5F82BEA16DE0011E3D5 /* PasswordList.swift in Sources */,
 				69F848592A18F6B300CFBE82 /* ViewModifiers.swift in Sources */,
 				69F848532A18F35800CFBE82 /* PaswordModel.swift in Sources */,
 				69A2503D2AA11C57007BFA97 /* TabControllerView.swift in Sources */,
+				69F7F5FB2BEA1D620011E3D5 /* AddCategoryView.swift in Sources */,
 				69F8482A2A18F2F600CFBE82 /* GeneratorView.swift in Sources */,
 				69F848562A18F4F400CFBE82 /* PasswordViewModel.swift in Sources */,
+				69F7F5F62BEA11930011E3D5 /* Categories.swift in Sources */,
 				69F848282A18F2F600CFBE82 /* PasswordGeneratorApp.swift in Sources */,
 				69A250432AA1204C007BFA97 /* PasswordsView.swift in Sources */,
 			);
@@ -473,6 +501,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PasswordGenerator/Preview Content\"";
+				DEVELOPMENT_TEAM = J32RGX64P6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Passwords;
@@ -503,6 +532,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PasswordGenerator/Preview Content\"";
+				DEVELOPMENT_TEAM = J32RGX64P6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Passwords;
@@ -532,6 +562,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J32RGX64P6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -551,6 +582,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J32RGX64P6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -569,6 +601,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J32RGX64P6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -587,6 +620,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J32RGX64P6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;

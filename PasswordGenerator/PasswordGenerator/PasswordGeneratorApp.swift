@@ -14,6 +14,6 @@ struct PasswordGeneratorApp: App {
         WindowGroup {
             TabControllerView()
         }
-        .modelContainer(for: [Password.self])
+        .modelContainer(for: [Password.self,Categories.self])
     }
 }
