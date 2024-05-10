@@ -17,9 +17,7 @@ struct AdapterView: View {
     
     @Environment(\.modelContext) var context
     
-    @Query var categories: [Categories]
     @State private var selectedCategoryIndex = 0
-    
     
     var body: some View {
         NavigationStack{
@@ -27,39 +25,45 @@ struct AdapterView: View {
                 Form{
                     Section(header: Text("Password")){
                         TextField("Enter your password", text: $customPasswordTf)
-                        if vm.checkStrength(customPasswordTf) == "Weak" {
-                            HStack{
-                                Text("Strength")
-                                Spacer()
-                                Text("Weak").foregroundColor(Color.red)
+                            .onChange(of: customPasswordTf) { oldValue,newValue in
+                                let strength = vm.checkStrength(newValue)
+                                passwordStrength = strength
                             }
-                        }
-                        else if vm.checkStrength(customPasswordTf) == "Medium"{
-                            HStack{
-                                Text("Strength")
-                                Spacer()
-                                Text("Medium").foregroundColor(Color.orange)
-                            }
-                        }
-                        else{
-                            HStack{
-                                Text("Strength")
-                                Spacer()
-                                Text("Strong").foregroundColor(Color.green)
-                            }
+                        
+                        let strength = vm.checkStrength(customPasswordTf)
+                        
+                        if strength == "Weak" {
+                            passwordStrengthView(strength: "Weak", color: .red)
+                        } else if strength == "Medium" {
+                            passwordStrengthView(strength: "Medium", color: .orange)
+                        } else if strength == "Strong" {
+                            passwordStrengthView(strength: "Strong", color: .green)
                         }
                         
                     }
                     
-                    if !categories.isEmpty{
-                        Section(header: Text("Category")) {
-                            Picker("Select Category", selection: $selectedCategoryIndex) {
-                                ForEach(0..<categories.count, id: \.self) { index in
-                                    Text(categories[index].name).tag(index)
-                                }
-                            }
-                            .pickerStyle(MenuPickerStyle())
+                    Section(header: Text("Contains")){
+                        HStack{
+                            Text("At least 6 characters")
+                            Spacer()
+                            Image(systemName: vm.checkCharacterCount(customPasswordTf) ? "checkmark.circle.fill" : "checkmark.circle")
+                                .foregroundStyle(vm.checkCharacterCount(customPasswordTf) ? .green : .secondary)
                         }
+                        HStack{
+                            Text("At least 1 uppercase letter")
+                            Spacer()
+                            Image(systemName: vm.checkIfContainsUpper(customPasswordTf) ? "checkmark.circle.fill" : "checkmark.circle")
+                            .foregroundStyle(vm.checkIfContainsUpper(customPasswordTf) ? .green : .secondary)                        }
+                        HStack{
+                            Text("At least 1 number")
+                            Spacer()
+                            Image(systemName: vm.checkIfContainsNumbers(customPasswordTf) ? "checkmark.circle.fill" : "checkmark.circle")
+                            .foregroundStyle(vm.checkIfContainsNumbers(customPasswordTf) ? .green : .secondary)                        }
+                        HStack{
+                            Text("At least 1 symbol")
+                            Spacer()
+                            Image(systemName: vm.checkIfContainsSymbol(customPasswordTf) ? "checkmark.circle.fill" : "checkmark.circle")
+                            .foregroundStyle(vm.checkIfContainsSymbol(customPasswordTf) ? .green : .secondary)                        }
                     }
                     
                     Button(action: {
@@ -76,35 +80,21 @@ struct AdapterView: View {
         }
     }
     
-    func addToSavedPasswords(password: String, colorStrength: String) {
-        let newPassword = Password(name: password, color: passwordStrength)
-        
-        context.insert(newPassword)
-        
-        if categories.isEmpty {
-            let category = Categories(name: "All Passwords", icon: "tray.2", password: [newPassword])
-            context.insert(category)
-        } else {
-            let selectedCategory = categories[selectedCategoryIndex]
-            selectedCategory.password.append(newPassword)
-            context.insert(selectedCategory)
+    func passwordStrengthView(strength: String, color: Color) -> some View {
+        HStack {
+            Text("Strength")
+            Spacer()
+            Text(strength).foregroundColor(color)
         }
     }
-
+    
+    func addToSavedPasswords(password: String, colorStrength: String) {
+        let password = Password(name: password, color: colorStrength)
+        context.insert(password)
+    }
 }
 
 
 
 
-//                    Section(header: Text("Contains")){
-//                        VStack(alignment:.leading){
-//                            Text("At least 6 characters")
-//                                .foregroundColor(vm.checkCharacterCount(customPasswordTf) ? .blue : .gray.opacity(0.2))
-//                            Text("At least 1 uppercase letter")
-//                                .foregroundColor(vm.checkIfContainsUpper(customPasswordTf) ? .blue : .gray.opacity(0.2))
-//                            Text("At least 1 number")
-//                                .foregroundColor(vm.checkIfContainsNumbers(customPasswordTf) ? .blue : .gray.opacity(0.2))
-//                            Text("At least 1 symbol")
-//                                .foregroundColor(vm.checkIfContainsSymbol(customPasswordTf) ? .blue : .gray.opacity(0.2))
-//                        }
-//                    }
+
