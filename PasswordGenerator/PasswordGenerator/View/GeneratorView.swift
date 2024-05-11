@@ -53,7 +53,7 @@ struct GeneratorView: View {
                                         .tint(.red)
                                         
                                         Button {
-                                            addToSavedPasswords(password: password.password, colorStrength: password.colorStrength)
+                                            addToSavedPasswords(password: password.password, colorStrength: colorToString(color: password.colorStrength))
                                         } label: {
                                             Label("Add", systemImage: "plus")
                                         }
@@ -77,18 +77,17 @@ struct GeneratorView: View {
         vm.passwords.remove(atOffsets: indexSet)
     }
     
-    func addToSavedPasswords(password: String, colorStrength: Color) {
-        let colorString = colorToString(color: colorStrength)
-        let password = Password(name: password, color: colorString)
+    func addToSavedPasswords(password: String, colorStrength: String) {
+        let password = Password(name: password, color: colorStrength)
         context.insert(password)
     }
     
-    func colorToString(color: Color) -> String {
-        switch color {
-        case .red: return "#FF0000"
-        case .orange: return "#00FF00"
-        case .green: return "#00FF00"
-        default: return "#FFFFFF" //gray
+    func colorToString(color: Color) -> String{
+        switch color{
+        case .red: return "Weak"
+        case .orange: return "Medium"
+        case .green: return "Strong"
+        default: return "Other"
         }
     }
 }

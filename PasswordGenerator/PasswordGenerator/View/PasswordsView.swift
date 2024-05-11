@@ -15,6 +15,14 @@ struct PasswordsView: View {
     @Query var allPasswords: [Password]
     
     @State private var searchText: String = ""
+    
+    var filteredPasswords: [Password] {
+            if searchText.isEmpty {
+                return allPasswords
+            } else {
+                return allPasswords.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+            }
+        }
         
     var body: some View {
         NavigationStack{
@@ -28,7 +36,7 @@ struct PasswordsView: View {
                     }
                     else{
                         List{
-                            ForEach(allPasswords) { password in
+                            ForEach(filteredPasswords) { password in
                                 HStack{
                                     Text(password.name)
                                     Spacer()
@@ -40,6 +48,7 @@ struct PasswordsView: View {
                             }
                             .onDelete(perform: delete)
                         }
+                        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search Password")
                     }
                 }.navigationTitle("Passwords")
         }
@@ -62,6 +71,4 @@ struct PasswordsView: View {
         default: return .gray
         }
     }
-
-
 }
