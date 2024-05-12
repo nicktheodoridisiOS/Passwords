@@ -2,7 +2,7 @@
 <img width="1200" alt="cover" src="https://github.com/nicktheodoridisiOS/Passwords/assets/122683142/0c33fb98-74ab-48a1-8558-8ae8fa4f6dc7">
 
 ### About Application
-Passwords is an iOS mobile app developed with Swift programming language. In this app you have the option through some fields to generate passwords and create your own showing you how strong it is and you can save them in your library.
+Passwords is an iOS mobile app developed with Swift programming language. In this app you have the option through some fields to generate passwords and create your own one as can show you how strong it is and also you can save them in your library.
 
 <img width="1200" alt="generator" src="https://github.com/nicktheodoridisiOS/Passwords/assets/122683142/8d762261-d67c-40b1-a1c3-29a9671551f1">
 
