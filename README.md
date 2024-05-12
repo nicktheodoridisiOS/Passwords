@@ -33,7 +33,14 @@ class Password{
 <img width="1200" alt="mode" src="https://github.com/nicktheodoridisiOS/Passwords/assets/122683142/983930a5-d301-4483-b569-ca398cf57608">
 
 ### Project Tools
-<img width="1200" alt="tools" src="https://github.com/nicktheodoridisiOS/Passwords/assets/122683142/7125daa3-e3cc-4a46-a7b3-a4dffabc5641">
+|Xcode|Github|Figma|
+|:---:|:---:|:---:|
+|<img width="60" alt="mode" src="https://cdn.jim-nielsen.com/macos/512/xcode-2020-11-11.png?rf=1024">|<img width="60" alt="mode" src="https://cdn.jim-nielsen.com/macos/512/github-desktop-2021-05-20.png?rf=1024">|<img width="60" alt="mode" src="https://cdn.jim-nielsen.com/macos/512/figma-2021-05-05.png?rf=1024">|
+
+### Programming Stack
+|Swift|SwiftUI|SwiftData|
+|:---:|:---:|:---:|
+|<img width="60" alt="mode" src="https://developer.apple.com/assets/elements/icons/swift/swift-96x96_2x.png">|<img width="60" alt="mode" src="https://developer.apple.com/assets/elements/icons/swiftui/swiftui-128x128_2x.png">|<img width="60" alt="mode" src="https://developer.apple.com/assets/elements/icons/swiftdata/swiftdata-96x96_2x.png">|
 
 ### Contact
 I'm always open to questions, suggestions and comments. If you have any questions or need assistance, feel free to contact me at [nicktheodoridiscontact@gmail.com](mailto:nicktheodoridiscontact@gmail.com) or through my GitHub account.
