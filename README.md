@@ -33,7 +33,7 @@ class Password{
 <img width="1200" alt="mode" src="https://github.com/nicktheodoridisiOS/Passwords/assets/122683142/983930a5-d301-4483-b569-ca398cf57608">
 
 ### Project Tools
-|Xcode|Github|Figma|
+|Xcode|GitΗub|Figma|
 |:---:|:---:|:---:|
 |<img width="60" alt="mode" src="https://cdn.jim-nielsen.com/macos/512/xcode-2020-11-11.png?rf=1024">|<img width="60" alt="mode" src="https://cdn.jim-nielsen.com/macos/512/github-desktop-2021-05-20.png?rf=1024">|<img width="60" alt="mode" src="https://cdn.jim-nielsen.com/macos/512/figma-2021-05-05.png?rf=1024">|
 
