@@ -13,10 +13,6 @@ Passwords is an iOS mobile app developed with Swift programming language. In thi
 <img width="1200" alt="library" src="https://github.com/nicktheodoridisiOS/Passwords/assets/122683142/13cd7422-115a-4622-b8fb-ff89b335ced1">
 
 ```Swift
-import Foundation
-import SwiftData
-import SwiftUI
-
 @Model
 class Password{
     var name: String
@@ -31,6 +27,9 @@ class Password{
 
 ### Display Preferences
 <img width="1200" alt="mode" src="https://github.com/nicktheodoridisiOS/Passwords/assets/122683142/983930a5-d301-4483-b569-ca398cf57608">
+
+### Run Application
+https://github.com/nicktheodoridisiOS/Passwords/assets/122683142/9921500d-45a1-4a70-a6b3-3ec49c175b0b
 
 ### Project Tools
 |Xcode|GitΗub|Figma|
