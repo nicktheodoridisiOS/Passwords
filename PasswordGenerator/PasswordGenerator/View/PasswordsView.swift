@@ -38,7 +38,7 @@ struct PasswordsView: View {
                         List{
                             ForEach(filteredPasswords) { password in
                                 HStack{
-                                    Text(password.name)
+                                    Text(password.name).textSelection(.enabled)
                                     Spacer()
                                     Image(systemName: "lock.fill")
                                         .foregroundStyle(stringToColor(color: password.color))

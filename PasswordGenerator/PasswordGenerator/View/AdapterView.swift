@@ -70,7 +70,7 @@ struct AdapterView: View {
                         addToSavedPasswords(password: customPasswordTf, colorStrength: passwordStrength)
                         customPasswordTf = ""
                     }, label: {
-                        Text("Save Password").foregroundStyle(customPasswordTf.isEmpty ? .gray.opacity(0.2) : .blue).centerH()
+                        Text("Add Password").foregroundStyle(customPasswordTf.isEmpty ? .gray.opacity(0.2) : .blue).centerH()
                     })
                     
                 }
