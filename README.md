@@ -9,8 +9,10 @@ Passwords is an iOS mobile app developed with Swift programming language. In thi
 ### Create Your Own Password
 <img width="1200" alt="creator" src="https://github.com/nicktheodoridisiOS/Passwords/assets/122683142/9a82fc4b-0e3a-4dde-8045-8b8203b2bbc2">
 
-### Build Your Password Library
-<img width="1200" alt="library" src="https://github.com/nicktheodoridisiOS/Passwords/assets/122683142/13cd7422-115a-4622-b8fb-ff89b335ced1">
+### Persist Data and Data Synchronization
+<img width="80" alt="preferences" src="https://developer.apple.com/assets/elements/icons/swiftdata/swiftdata-96x96_2x.png">
+
+For persistent data and data synchronization, the  [SwiftData](https://developer.apple.com/xcode/swiftdata/) framework was used. This way, the user can store their data by synchronizing it across multiple devices with the same account credentials. This implementation ensures effective management and retrieval of sensitive data, providing the necessary security and reliability for storing user passwords.
 
 ```Swift
 @Model
